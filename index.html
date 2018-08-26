@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <h2>Contact Us</h2>
+<form>
+  <input type="text" name="Fname" placeholder="First Name" class="form-control form-group" id="demo" onkeypress="clickfunction('demo' ,'id1')">
+  <span id="id1">Please Enter yout Name</span>
+  <input type="text" name="Lname" placeholder="Last Name" class="form-control form-group" id="demo1" onkeypress="clickfunction('demo1' ,'id2')">
+  <span id="id2" >Please Enter yout Name</span>
+  <input type="number" placeholder="Phone Number " class="form-control form-group" id="demo2" onkeypress="clickfunction('demo2' ,'id3')">
+  <span id="id3">Please Enter yout Name</span>
+  <input type="email"  placeholder="Email" class="form-control form-group" id="demo3" onkeypress="clickfunction('demo3' ,'id4')">
+  <span id="id4">Please Enter yout Name</span>
+  <input type="text" placeholder="Reason For Contact" class="form-control form-group" id="demo4" onkeypress="clickfunction('demo4' ,'id5')">
+  <span id="id5">Please Enter yout Name</span>
+  <input type="button" value="Submit" class="form-control form-group" onClick="myfunction()">
+</form>
+<style>
+
+h2{
+  text-align:center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form{
+  width:50%;
+  margin: 0 auto;
+}
+:focus {
+  border-color: blue;
+  outline: 0;
+}
+span{
+  visibility: hidden;
+}
+  
+</style>
+<script>
+ 
+  function myfunction(){
+  var x = document.getElementById('demo').value;
+  var y = document.getElementById('demo1').value;
+  var z = document.getElementById('demo2').value;
+  var a = document.getElementById('demo3').value;
+  var s = document.getElementById('demo4').value;
+  if (x == ""){
+    document.getElementById('demo').focus();
+    document.getElementById('demo').style.border = " 1px solid red";
+    document.getElementById('id1').style.visibility = 'visible ';
+
+    return false;
+  }
+  else if (y == ""){
+    document.getElementById('demo1').focus();
+    document.getElementById('demo1').style.border = " 1px solid red";
+    document.getElementById('id2').style.visibility = 'visible ';
+    return false;
+  }
+  else if (z == ""){
+    document.getElementById('demo2').focus();
+    document.getElementById('demo2').style.border = " 1px solid red";
+    document.getElementById('id3').style.visibility = 'visible ';
+    return false;
+  }
+  else if (a == ""){
+    document.getElementById('demo3').focus();
+    document.getElementById('demo3').style.border = " 1px solid red";
+    document.getElementById('id4').style.visibility = 'visible ';
+    return false;
+  }
+  else if (s == ""){
+    document.getElementById('demo4').focus();
+    document.getElementById('demo4').style.border = " 1px solid red";
+    document.getElementById('id5').style.visibility = 'visible';
+    return false;
+  }
+  
+}
+function clickfunction(x,y){
+  document.getElementById(x).style.border = "1px solid #ccc";
+  document.getElementById(y).style.visibility = 'hidden';
+}
+
+</script>
+</body>
+</html>
+
+
+  
+ 
